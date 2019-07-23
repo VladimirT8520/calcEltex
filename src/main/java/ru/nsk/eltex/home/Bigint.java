@@ -7,5 +7,6 @@ public class Bigint {
         BigInteger a = new BigInteger("2");
         a = a.pow(1000);
         System.out.println("2^1000 = " + a);
+
     }
 }
