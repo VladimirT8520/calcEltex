@@ -1,3 +1,5 @@
+package ru.eltex.home.calc;
+
 import java.util.Scanner;
 public class calcEltex {
     static Scanner scanner = new Scanner(System.in);
