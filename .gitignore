@@ -1,1 +1,9 @@
 .idea/
+*.class
+*.iml
+.idea
+.gradle
+build/
+.navigation
+captures/
+output.json
