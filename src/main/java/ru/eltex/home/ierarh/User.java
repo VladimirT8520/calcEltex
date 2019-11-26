@@ -1,14 +1,12 @@
 package ru.eltex.home.ierarh;
 
-import com.sun.tools.jdeprscan.CSV;
-
-public abstract class User {
+abstract class User implements CSV {
     private String fio;
     private String phone;
     private String email;
-    private Integer id;
+    private String id;
 
-    public User(String fio, String phone, String email, Integer id) {
+    public User(String fio, String phone, String email, String id) {
         this.email = email;
         this.fio = fio;
         this.phone = phone;
@@ -40,11 +38,23 @@ public abstract class User {
         this.email = email;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
+    }
+
+    public String toCSV(){
+        return this.email+"; "+this.fio+"; "+this.email +"; "+this.phone;
+    }
+
+    public void fromCSV (String str){
+        String []arr = str.split("; ");
+        setId(arr[0]);
+        setFio(arr[1]);
+        setEmail(arr[2]);
+        setPhone(arr[3]);
     }
 }
