@@ -1,5 +1,7 @@
 package ru.eltex.home.ierarh;
 
+import java.io.IOException;
+
 abstract class User implements CSV {
     private String fio;
     private String phone;
@@ -46,7 +48,7 @@ abstract class User implements CSV {
         this.id = id;
     }
 
-    public String toCSV(){
+    public String toCSV() throws IOException {
         return this.email+"; "+this.fio+"; "+this.email +"; "+this.phone;
     }
 

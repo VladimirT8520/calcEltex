@@ -1,7 +1,8 @@
 package ru.eltex.home.ierarh;
 
-interface CSV {
-    String toCSV();
+import java.io.IOException;
 
+interface CSV {
+    String toCSV() throws IOException;
     void fromCSV(String str);
 }
