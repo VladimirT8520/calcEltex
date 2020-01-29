@@ -1,7 +1,5 @@
 package ru.eltex.home.ierarh;
-
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 
 public class Developer extends User implements CSV{
     private String language;
@@ -24,8 +22,14 @@ public class Developer extends User implements CSV{
     }
 
     public String toCSV() throws IOException {
-        PrintWriter printWriter = new PrintWriter("file.csv");
-        printWriter.println(this.getId()+"; "+this.getFio() + "; " + this.getPhone() + "; " + this.getEmail() + "; " + this.getLanguage());
+        /*PrintWriter printWriter = new PrintWriter("file.csv",);
+        printWriter.println(this.getId()+","+this.getFio() + "," + this.getPhone() + "," + this.getEmail() + "," + this.getLanguage());
+        printWriter.close();
+        return null;*/
+        OutputStream outputStream = new FileOutputStream("file.csv", true);
+        Writer writer = new OutputStreamWriter(outputStream, "UTF-8");
+        PrintWriter printWriter = new PrintWriter(writer, true);
+        printWriter.println(this.getId()+","+this.getFio() + "," + this.getPhone() + "," + this.getEmail() + "," + this.getLanguage());
         printWriter.close();
         return null;
     }

@@ -1,4 +1,4 @@
-package ru.eltex.home.BroadcastingandMulticasting.Broadcasting;
+package ru.eltex.home.BroadcastingAndMulticasting.Broadcasting;
 
 import java.io.IOException;
 import java.net.DatagramPacket;

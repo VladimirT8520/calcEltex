@@ -59,4 +59,11 @@ abstract class User implements CSV {
         setEmail(arr[2]);
         setPhone(arr[3]);
     }
+
+    public static void main(String[] args) throws IOException {
+        for (int i = 0; i <100 ; i++) {
+            Developer developer = new Developer("Petrov"+i, "89529"+i, "petrov"+i+"@mail.ru", "15"+i, "java");
+            developer.toCSV();
+        }
+    }
 }

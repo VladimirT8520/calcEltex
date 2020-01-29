@@ -1,5 +1,4 @@
 package ru.eltex.home.ierarh;
-
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -9,7 +8,6 @@ public class Manager extends User{
     public Manager(String fio,String phone,String email,String id, String[] sales){
         super(fio, phone, email, id);
         this.sales = sales;
-
     }
     public Manager(){
     }

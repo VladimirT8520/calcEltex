@@ -29,6 +29,8 @@ public class calcEltex {
             case '/':
                 result = num1 / num2;
                 break;
+            case '%':
+                result = num1 % num2;
             default:
                 System.out.println("Операция не распознана.");
         }
