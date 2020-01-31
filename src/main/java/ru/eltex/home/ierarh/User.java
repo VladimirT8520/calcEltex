@@ -1,7 +1,11 @@
 package ru.eltex.home.ierarh;
 
-import java.io.IOException;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.io.IOException;
+@Getter
+@Setter
 abstract class User implements CSV {
     private String fio;
     private String phone;
@@ -15,38 +19,6 @@ abstract class User implements CSV {
         this.id = id;
     }
     public User(){}
-
-    public String getFio() {
-        return fio;
-    }
-
-    public void setFio(String fio) {
-        this.fio = fio;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String toCSV() throws IOException {
         return this.email+"; "+this.fio+"; "+this.email +"; "+this.phone;
